@@ -6,8 +6,38 @@ code_link.addEventListener("click", function (event) {
 				<div class="row">
                     <div class="col-sm-7 d-none d-sm-block">
 						<h2>Weather API</h2></br>
-						<p>Remember to tab on and off before leaving!
-						</br></br><a href="https://unique-hamster-ccb302.netlify.app/" class="btn btn-primary btn-lg">Open QR code</a>
+						<p>Remember to tap on and off before leaving!
+						</br></br><button type="button" class="btn btn-primary btn-lg"
+                        data-toggle="modal"
+                        data-target="#exampleModal">Open QR code</button>
+                        <div class="modal fade"
+                            id="exampleModal"
+                            tabindex="-1"
+                            role="dialog"
+                            aria-labelledby="exampleModalLabel"
+                            aria-hidden="true">
+                            
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                
+                                    <!-- Add image inside the body of modal -->
+                                    <div class="modal-body">
+                                        <img id="image" src=
+                                    "style/QRcode.png"
+                                            alt="Click on button" 
+                                        style="width:100%;"/>
+                                    </div>
+                    
+                                    <div class="modal-footer">
+                                        <button type="button"
+                                            class="btn btn-secondary"
+                                            data-dismiss="modal">
+                                            Close
+                                    </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
 						</p>
 					</div>
 					<div class="col-sm-5">
