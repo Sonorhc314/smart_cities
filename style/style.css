@@ -26,6 +26,16 @@ h1 {
   text-decoration: none;
 }
 
+.header {
+  padding: 1px;
+  text-align: center;
+  color: aliceblue;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  text-shadow: 2px 2px;
+  background-color: seagreen;
+}
+
 .sidebar a.active {
   background-color: #04aa6d;
   color: white;
@@ -42,7 +52,6 @@ div.content {
   margin-right: 200px;
   margin-bottom: 30px;
   padding: 1px 16px;
-  height: 1000px;
 }
 
 @media screen and (max-width: 700px) {
