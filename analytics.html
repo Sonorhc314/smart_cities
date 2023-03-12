@@ -34,10 +34,11 @@
             "Distance travelled by train",
             "Distance travelled by plane",
           ],
-          ["January", 150, 300, 324],
-          ["February", 100, 343, 433],
-          ["March", 357, 232, 43],
-          ["April", 219, 343, 433],
+          ["October", 150, 300, 324],
+          ["November", 100, 343, 433],
+          ["December", 357, 232, 43],
+          ["January", 219, 343, 433],
+          ["February", 200, 313, 400],
         ]);
 
         var options = {
@@ -50,6 +51,35 @@
 
         var chart = new google.charts.Bar(
           document.getElementById("barchart_material")
+        );
+
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["bar"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Month", "Bottles", "Cans", "Cartons"],
+          ["October", 15, 3, 10],
+          ["November", 3, 7, 8],
+          ["December", 9, 3, 10],
+          ["January", 10, 16, 24],
+          ["February", 8, 10, 8],
+        ]);
+
+        var options = {
+          chart: {
+            title: "Recycled materials",
+            subtitle: "",
+          },
+          bars: "horizontal", // Required for Material Bar Charts.
+        };
+
+        var chart = new google.charts.Bar(
+          document.getElementById("rec_material")
         );
 
         chart.draw(data, google.charts.Bar.convertOptions(options));
@@ -74,6 +104,29 @@
 
         var chart = new google.visualization.PieChart(
           document.getElementById("piechart")
+        );
+
+        chart.draw(data, options);
+      }
+    </script>
+    <script type="text/javascript">
+      google.charts.load("current", { packages: ["corechart"] });
+      google.charts.setOnLoadCallback(drawChart);
+
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ["Transport", "CO2 emmissions"],
+          ["Bottles", 45],
+          ["Cans", 39],
+          ["Cardboards", 60],
+        ]);
+
+        var options = {
+          title: "Total recycled items over 5 months",
+        };
+
+        var chart = new google.visualization.PieChart(
+          document.getElementById("rec_piechart")
         );
 
         chart.draw(data, options);
@@ -135,6 +188,8 @@
         <hr />
         <div id="barchart_material" style="width: 900px; height: 500px"></div>
         <div id="piechart" style="width: 900px; height: 500px"></div>
+        <div id="rec_material" style="width: 900px; height: 500px"></div>
+        <div id="rec_piechart" style="width: 900px; height: 500px"></div>
       </div>
     </div>
   </body>
