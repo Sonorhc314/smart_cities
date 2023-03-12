@@ -5,7 +5,7 @@ code_link.addEventListener("click", function (event) {
 			<div class="container", style="margin-top:100px;">
 				<div class="row">
                     <div class="col-sm-7 d-none d-sm-block">
-						<h2>Weather API</h2></br>
+						<h2>Scan the code</h2></br>
 						<p>Remember to tap on and off before leaving!
 						</br></br><button type="button" class="btn btn-primary btn-lg"
                         data-toggle="modal"
